@@ -1,0 +1,302 @@
+:root{
+    --colorbeige:#deb887;
+    --colorblanco:#f5f5f5;
+    --tipoletra:Arial, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background: var(--colorblanco);
+     font-family: var(--tipoletra);
+    overflow-x: hidden;
+    color: #4a4135;
+}
+
+header {
+    background-color: var(--colorbeige);
+}
+
+#titulo{
+    color: var(--colorblanco) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#titulo::before{
+    content: "\F91A";
+    font-family: "bootstrap-icons";
+    color: var(--colorblanco);
+    margin-left: 8px;
+}
+
+.nav-link {
+    color: var(--colorblanco) !important;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+    color: #735a17 !important;
+}
+
+.navbar-toggler {
+    border-color: var(--colorblanco);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/*inicio video*/
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Columna izquierda (textos) */
+.bloque {
+    display: flex;
+    gap: 40px; 
+    margin: 4% 8%; 
+    align-items: center; 
+}
+
+.texto {
+    width: 50%; 
+}
+
+.texto p {
+    font-family: "Iosevka Charon", monospace ;
+    font-size: 1.2rem;
+}
+
+/* Imagen derecha */
+.imagenes {
+    width: 50%;
+}
+
+.imagen {
+    width: 100%;
+    max-height: 350px; 
+    object-fit: cover;
+    border-radius: 20px; 
+    transition: 0.4s;
+}
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+.contactos-horarios {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 8px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: var(--colorblanco);
+    padding: 8px;
+}
+
+th,
+td {
+    border: 2px solid grey;
+    padding: 16px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--colorbeige);
+    color: var(--colorblanco);
+}
+
+/*************** footer **************/
+footer {
+  background-color: #232f3e;
+  color: var(--colorbeige);
+  text-align: center;
+  padding: 20px;
+}
+
+
+footer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+footer li {
+  margin: 5px 0;
+}
+
+.bloque.reverse {
+  flex-direction: column;
+}
+
+.iconos{
+    color: var(--colorbeige);
+    font-size: 25px;
+    margin: 0 10px;
+}
+.redes{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding: 12px;
+}
+td,th{
+    padding: 8px;
+
+}
+
+@media (max-width: 1064px) {
+
+    .bloque {
+        gap: 25px;
+        margin: 4% 5%;
+    }
+
+    .texto {
+        width: 55%;
+    }
+
+    .imagenes {
+        width: 45%;
+    }
+
+    .imagen {
+        max-height: 300px;
+    }
+
+    .sidebar {
+        max-width: 280px;
+    }
+
+    .header-logo {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header-logo {
+        font-size: 17px;
+        text-align: center;
+    }
+
+   
+    .sidebar {
+        width: 240px;
+    }
+
+    /* BLOQUES en columna */
+    .bloque {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .texto,
+    .imagenes {
+        width: 100%;
+    }
+
+    .imagen {
+        max-height: 280px;
+    }
+
+    /* video */
+    .contenido {
+        height: auto;
+    }
+
+    .video {
+        height: auto;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+    .main-header {
+        padding: 8px;
+    }
+
+    .header-logo {
+        font-size: 15px;
+    }
+
+    /* SIDEBAR full */
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* BLOQUES */
+    .bloque {
+        margin: 15px;
+        gap: 15px;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+
+    /* IMAGEN */
+    .imagen {
+        max-height: 220px;
+        border-radius: 12px;
+    }
+
+    /* VIDEO */
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* TABLA scroll */
+    table {
+        display: block;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 11px;
+    }
+}
